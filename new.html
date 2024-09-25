@@ -25,22 +25,35 @@
         }
 
         /* Styling for the button overlay */
-        .overlay-button {
+        .overlay-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 10px 20px;
-            border: 2px solid white;
             color: white;
-            background-color: transparent;
             text-align: center;
-            text-decoration: none;
             font-size: 18px;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            /* row-gap: 20px; */
+        }
+
+        .button{
+            color: white;
+            border: 2px solid white;
+            background-color: transparent;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
             cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+
+        }
+
+        .overlay-text{
+            color: white;
+            position: absolute;
         }
 
         /* Hover effect for the button */
@@ -60,10 +73,13 @@
     <div class="video-container">
         <video class="gif-video" autoplay muted loop playsinline>
             <source src="./images/new.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
         <!-- Button overlay -->
-        <a href="#" class="overlay-button">Get Pictures Here</a>
+         <div class="overlay-text">
+            <h1>Explore the wonders of the universe</h1>
+            <p>Discover the wonders of the universe with daily insights, stunning visuals, and interactive features</p>
+            <a class="button" href="#">Get Pictures Here</a>
+         </div>
     </div>
     
 </body>
